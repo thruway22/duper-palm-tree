@@ -11,3 +11,16 @@ docs = db.get_collection("test-col").stream()
 
 for doc in docs:
     st.write(f"{doc.id} => {doc.to_dict()}")
+
+
+data = {
+    "stringExample": "Hello, World!",
+    "booleanExample": True,
+    "numberExample": 3.14159265,
+    "dateExample": datetime.datetime.now(tz=datetime.timezone.utc),
+    "arrayExample": [5, True, "hello"],
+    "nullExample": None,
+    "objectExample": {"a": 5, "b": True},
+}
+
+db.collection("test-col").add(city)

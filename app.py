@@ -24,4 +24,4 @@ data = {
     "objectExample": {"a": 5, "b": True},
 }
 
-db.get_collection("test-col").add(city)
+db.get_collection("test-col").add(data)

@@ -7,7 +7,7 @@ class Connect:
     def __init__(self):
         self.key = st.secrets['textkey']
         self.credentials = service_account.Credentials.from_service_account_info(json.loads(self.key))
-        self.client = firestore.Client(credentials=self.credentials, project='my-family-fund')
+        self.client = firestore.Client(credentials=self.credentials, project='saleh-fundfolio')
 
     def get_collection(self, collection):
         return self.client.collection(collection)

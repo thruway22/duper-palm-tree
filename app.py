@@ -1,4 +1,5 @@
 import streamlit as st
+from datetime import datetime
 import auth 
 
 db = auth.Connect()
@@ -17,6 +18,7 @@ data = {
     "stringExample": "Hello, World!",
     "booleanExample": True,
     "numberExample": 3.14159265,
+    "dateExample": datetime.datetime.now(tz=datetime.timezone.utc),
     "arrayExample": [5, True, "hello"],
     "nullExample": None,
     "objectExample": {"a": 5, "b": True},

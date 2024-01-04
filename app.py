@@ -7,7 +7,7 @@ st.title('Test2')
 
 # st.write(conn.get_collection('test-col').get().to_dict())
 
-docs = db.collection("test-col").stream()
+docs = db.get_collection("test-col").stream()
 
 for doc in docs:
     st.write(f"{doc.id} => {doc.to_dict()}")

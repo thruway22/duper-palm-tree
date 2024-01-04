@@ -24,7 +24,12 @@ data = {
     # "objectExample": {"a": 5, "b": True},
 }
 
-db.get_collection("test-col").add(data)
+add = st.button('add')
+if add:
+    db.get_collection("test-col").add(data)
+
+
+
 
 
 

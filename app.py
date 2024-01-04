@@ -1,5 +1,6 @@
 import streamlit as st
 import datetime
+import pandas as pd
 import auth 
 
 db = auth.Connect()
@@ -35,5 +36,6 @@ if add:
 
 st.write(db.get_collection('test-col').document("USvxq0zBam4Q0JeG5gdF").get().to_dict())
 
+raw = db.get_collection('test-col').document("USvxq0zBam4Q0JeG5gdF").get().to_dict()["arrayExample"]
 
-
+st.write(pd.DataFrame(raw))
